@@ -330,6 +330,42 @@ border-radius: 0;
     font-size: 20px;
     color: var(--GreenColor);
 }
+.HelpCenterAccordian .card{
+    border: none;
+}
+.HelpCenterAccordian .card:not(:last-of-type){
+    margin-bottom: 0px;
+    border-bottom: 1px solid #BDBDBD !important;
+}
+.HelpCenterAccordian .card-header{
+    background: transparent;
+    border: none;
+    color: var(--GrayDark);
+    font-size: var(--FS18);
+    font-weight: 600;
+    cursor: pointer;
+}
+.HelpCenterAccordian .card-body{
+    padding-top: 0 ;
+    color: var(--GrayLight);
+    font-weight: 500;
+    font-size: var(--FS15);
+    
+}
+.helpcenterUL {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+}
+.helpcenterUL li{
+    color: #D0D0D0;
+    font-size: var(--FS22);
+    margin-bottom: 20px;
+}
+.helpcenterUL li.active{
+    color: var(--GreenColor);
+}
 /*HELP FAQ*/
 .HelpFAQ {
     padding-bottom: 80px;
@@ -471,4 +507,111 @@ color: var(--GrayLight);
     color: #bdbdbd;
     font-size: var(--FS15);
     font-weight: 300;
+}
+
+/*Investor Modal*/
+.investormodal .form-control{
+    background: #FFFFFF;
+border: 1px solid #D0D0D0;
+border-radius: 0;
+}
+.investormodal input.form-control{
+    height: 50px;
+}
+.investormodal .form-control:focus{
+    border-color: var(--GreenColor);
+    box-shadow: none;
+    outline: none;
+}
+
+.investormodal .form-control::placeholder{
+    color:#dddddd;
+    font-size: 14px;
+}
+
+.investormodal h2{
+    font-size: var(--FS34);
+    color: var(--GrayDark);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.investormodal h3{
+    font-size: var(--FS18);
+    color: var(--GrayLight);
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.investormodal p{
+    font-size: 12px;
+    color: var(--GrayLight);
+}
+.investormodal .closePopup{
+    background: transparent;
+    border: none;
+    position: absolute;
+    color: var(--GrayLight);
+    right: 25px;
+    top: 20px;
+    font-size: 20px;
+}
+
+
+/*Login Modal*/
+.loginModal .form-control{
+    background: #FFFFFF;
+border: 1px solid #D0D0D0;
+border-radius: 0;
+}
+.loginModal input.form-control{
+    height: 50px;
+}
+.loginModal .form-control:focus{
+    border-color: var(--GreenColor);
+    box-shadow: none;
+    outline: none;
+}
+
+.loginModal .form-control::placeholder{
+    color:#dddddd;
+    font-size: 14px;
+}
+
+.loginModal h2{
+    font-size: var(--FS34);
+    color: var(--GrayDark);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.loginModal h3{
+    font-size: var(--FS18);
+    color: var(--GrayLight);
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.loginModal p{
+    font-size: 12px;
+    color: var(--GrayLight);
+}
+.loginModal .closePopup{
+    background: transparent;
+    border: none;
+    position: absolute;
+    color: var(--GrayLight);
+    right: 25px;
+    top: 20px;
+    font-size: 20px;
+}
+.loginModal .form-control{
+    width: 100% !important;
+    border-radius: 0px !important;
+    margin-bottom: 20px !important;
+}
+.loginModal .form-control:focus{
+    border-color: var(--GreenColor);
+    box-shadow: none;
+    outline: none;
 }

@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/bootstrap.css'
 import {Modal, ModalDialog  , ModalHeader , ModalTitle , ModalBody , ModalFooter, Button } from 'react-bootstrap'
 import $ from 'jquery'
 import logo from '../../assets/images/logo.svg'
@@ -53,16 +55,21 @@ export class Navbar extends Component {
                         </div>
                     </div>
                 </nav>
-                <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter"
-      centered >
-                 
-                    <Modal.Body>
-                        I will not close if you click outside me. Don't even try to press escape key.
+                <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter" centered className="loginModal">
+                    <Modal.Body className="p-5">
+                        <button className="closePopup" onClick={()=>{this.handelModal()}}><i className="fa fa-times"></i></button>
+                        <h2>Investor</h2>
+                        <h3>We are open to suggestions</h3>
+                        <PhoneInput
+                            country={'us'}
+                            value={this.state.phone}
+                            onChange={phone => this.setState({ phone })}
+                            />
+                        {/* <div className="form-group">
+                                <input class="form-control" type="text" placeholder="Your Phone"/>
+                            </div> */}
+                            <button className="btn btn-theme btn-block">Next</button>
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={()=>{this.handelModal()}}>Close</Button>
-                        <Button variant="primary" >Understood</Button>
-                    </Modal.Footer>
                 </Modal>
             </div>
         )

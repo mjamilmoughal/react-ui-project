@@ -129,21 +129,23 @@ export class Home extends Component {
                     </Tabs>
                     </div>
                 </section>
-                <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter"
-      centered>
-
-<Modal.Body>
-    I will not close if you click outside me. Don't even try to press escape key.
-</Modal.Body>
-<Modal.Footer>
-    <Button variant="secondary" onClick={()=>{this.handelModal()}}>Close</Button>
-    <Button variant="primary" >Understood</Button>
-</Modal.Footer>
-</Modal>
-
+                <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter" centered className="investormodal">
+                    <Modal.Body className="p-5">
+                            <button className="closePopup" onClick={()=>{this.handelModal()}}><i className="fa fa-times"></i></button>
+                            <h2>Investor</h2>
+                            <h3>We are open to suggestions</h3>
+                            <div className="form-group">
+                                <input class="form-control" type="text" placeholder="Your Name"/>
+                            </div>
+                            <div className="form-group">
+                                <input class="form-control" type="email" placeholder="Your Email"/>
+                            </div>
+                            <button className="btn btn-theme btn-block">Submit</button>
+                            <p className="mb-0 mt-3 text-center">By submitting your name and email you are requesting information about an investment opportunity with Sage Alliance, Inc.  
+                                Your contact information will be kept confidential and will not be spammed or shared with any 3rd parties.</p>
+                    </Modal.Body>
+                </Modal>
             </div>
-
-
         )
     }
 }
