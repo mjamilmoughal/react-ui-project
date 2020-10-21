@@ -9,7 +9,7 @@ export class Contact extends Component {
                 </div>
                 <div className="container h-100">
                 <div className="row align-items-center h-100 justify-content-center">
-                    <div className="col-md-5">
+                    <div className="col-md-8 col-lg-8 col-xl-5">
                     <div className="contact-form">
                         <h1>Please, Let Us Know<br></br>What’s Going On</h1>
                         <div className="form-group">

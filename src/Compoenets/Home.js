@@ -23,7 +23,7 @@ export class Home extends Component {
           </div>
         <div className="container h-100">
           <div className="row align-items-center h-100">
-            <div className="col-md-4">
+            <div className="col-md-6 col-lg-5 col-xl-4">
               <div className="mb-4">
                 <h1>Rideshare For</h1>
                 <h1>Professionals, By</h1>
@@ -33,7 +33,7 @@ export class Home extends Component {
               <p>get picked up by a safe and experienced driver</p>
               <p>every time. Download our app and try it today!</p>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-6 col-lg-7 col-xl-8">
               <img src="/images/banner-mobile.png" className="w-100" alt=""/>
             </div>
           </div>

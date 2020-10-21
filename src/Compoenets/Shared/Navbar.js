@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/bootstrap.css'
-import {Modal, ModalDialog  , ModalHeader , ModalTitle , ModalBody , ModalFooter, Button } from 'react-bootstrap'
+import {Modal, ModalDialog  , ModalHeader , ModalTitle , ModalBody , ModalFooter, Button ,Nav } from 'react-bootstrap'
 import $ from 'jquery'
 import logo from '../../assets/images/logo.svg'
 export class Navbar extends Component {
@@ -31,7 +31,7 @@ export class Navbar extends Component {
     render() {
         return (
             <div className="banner">
-                <nav className="navbar navbar-expand-lg  fixed-top" id="navbar">
+                {/* <nav className="navbar navbar-expand-lg  fixed-top" id="navbar">
                     <div className="container">
                         <Link to="/" className="navbar-brand" >
                         <img src="/images/logo.svg"/>
@@ -54,7 +54,20 @@ export class Navbar extends Component {
                             </ul>
                         </div>
                     </div>
-                </nav>
+                </nav> */}
+
+                {/* <Navbar bg="light" expand="lg">
+                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="ml-auto">
+                    <Nav.Link href="#home">Home</Nav.Link>
+                    <Nav.Link href="#link">Link</Nav.Link>
+                   
+                    </Nav>
+                    
+                </Navbar.Collapse>
+                </Navbar> */}
                 <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter" centered className="loginModal">
                     <Modal.Body className="p-5">
                         <button className="closePopup" onClick={()=>{this.handelModal()}}><i className="fa fa-times"></i></button>
