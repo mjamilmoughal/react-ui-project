@@ -10,7 +10,7 @@ export class HelpCenter extends Component {
                         <img src="/images/header-owl-shape.svg"/>
                     </div>
                     <div className="container h-100">
-                    <div className="row align-items-center h-100">
+                    <div className="row align-items-end align-items-md-center  h-100">
                         <div className="col-md-6">
                         <div className="mb-4">
                             <h1>Hello, How Can We</h1>

@@ -390,7 +390,7 @@ border-radius: 0;
     color:var(--GreenColor);
     background-color:#fff;
     border-color:var(--GreenColor);
-    width: 200px;
+    /* width: 200px; */
     border-radius: 0 !important;
 
 }
@@ -647,14 +647,14 @@ border-radius: 0;
 
 @media only screen and (max-width: 800px) {
     :root{
-      --FS58:30px;
-      /* --FS45:45px;*/
-      --FS34:30px;
-      --FS22:18px;
+    --FS58:30px;
+    --FS45:30px;
+    --FS34:30px;
+    --FS22:18px;
     --FS18:16px;
-      --FS16:15px;
-      --FS15:15px;
-      --FS14:14px; 
+    --FS16:15px;
+    --FS15:15px;
+    --FS14:14px; 
     }
   
     .hero-screen .owl-image , .hero-help-screen .owl-image , .contact-screen .owl-image{
@@ -695,5 +695,23 @@ border-radius: 0;
     }
     .hero-help-screen .custome-help-input{
         width: 80%;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .contact-screen .contact-form{
+        padding: 40px 15px;
+    }
+
+    #navbar{
+        padding: 0.8rem 1rem;
+        background: #fff;
+    }
+
+    .navbar-nav.ml-auto{
+        margin-right: auto!important;
+    }
+    .banner .navbar a.nav-link{
+        color: var(--GrayDark);
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import {Container, Row, Col,Button ,Tabs,Tab, TabContainer ,TabContent ,TabPane  } from 'react-bootstrap'
-import Navbar from './Compoenets/Shared/Navbar'
+import Navbarctm from './Compoenets/Shared/Navbarctm'
 import Footer from './Compoenets/Shared/Footer'
 import AppRoutes from './AppRoutes'
 
@@ -9,7 +9,7 @@ import AppRoutes from './AppRoutes'
 function App() {
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbarctm></Navbarctm>
         <AppRoutes></AppRoutes>
       <Footer></Footer>
     </div>

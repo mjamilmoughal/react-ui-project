@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import PhoneInput from 'react-phone-input-2'
+import {Modal,Container ,Nav , Navbar} from 'react-bootstrap'
 import 'react-phone-input-2/lib/bootstrap.css'
-import {Modal, ModalDialog  , ModalHeader , ModalTitle , ModalBody , ModalFooter, Button ,Nav } from 'react-bootstrap'
-import $ from 'jquery'
+// import $ from 'jquery'
 import logo from '../../assets/images/logo.svg'
-export class Navbar extends Component {
+export class Navbarctm extends Component {
     componentDidMount(){
         window.onscroll = function() {
             var nav = document.getElementById('navbar');
@@ -56,18 +56,33 @@ export class Navbar extends Component {
                     </div>
                 </nav> */}
 
-                {/* <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                   
-                    </Nav>
-                    
-                </Navbar.Collapse>
-                </Navbar> */}
+                <Navbar fixed="top" expand="lg" id="navbar">
+                    <Container>
+                    <Navbar.Brand >
+                    <Link to="/" className="navbar-brand" >
+                            <img src="/images/logo.svg"/>
+                            </Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <Nav className="ml-auto">
+                                {/* <Nav.Link href="#home">Home</Nav.Link>
+                                <Nav.Link href="#link">Link</Nav.Link> */}
+                                <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/Contact" >Contact</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/HelpCenter" >Help Center</Link>
+                            </li>
+                            <li className="nav-item">
+                                <button className="btn btn-theme " onClick={()=>{this.handelModal()}}  type="submit">Login</button>
+                            </li>
+                            </ul>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Container>
+                </Navbar>
                 <Modal show={this.state.show} aria-labelledby="contained-modal-title-vcenter" centered className="loginModal">
                     <Modal.Body className="p-5">
                         <button className="closePopup" onClick={()=>{this.handelModal()}}><i className="fa fa-times"></i></button>
@@ -89,5 +104,5 @@ export class Navbar extends Component {
     }
 }
 
-export default Navbar
+export default Navbarctm
 

@@ -22,7 +22,7 @@ export class Home extends Component {
             <img src="/images/header-owl-shape.svg"/>
           </div>
         <div className="container h-100">
-          <div className="row align-items-center h-100">
+          <div className="row align-items-end align-items-md-center  h-100">
             <div className="col-md-6 col-lg-5 col-xl-4">
               <div className="mb-4">
                 <h1>Rideshare For</h1>
