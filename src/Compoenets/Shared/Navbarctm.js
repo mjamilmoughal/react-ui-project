@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 import PhoneInput from 'react-phone-input-2'
 import {Modal,Container ,Nav , Navbar} from 'react-bootstrap'
 import 'react-phone-input-2/lib/bootstrap.css'
@@ -15,6 +15,12 @@ export class Navbarctm extends Component {
                 nav.classList.remove("bg-white");
             }
         }
+        // var currentpath = window.location.pathname
+        // console.log(currentpath)
+        // if(currentpath === "/Home"){
+        //     console.log('this path')
+        // }
+
     };
     constructor(){
         super()
@@ -59,7 +65,7 @@ export class Navbarctm extends Component {
                 <Navbar fixed="top" expand="lg" id="navbar">
                     <Container>
                     <Navbar.Brand >
-                    <Link to="/" className="navbar-brand" >
+                    <Link to="/Home" className="navbar-brand" >
                             <img src="/images/logo.svg"/>
                             </Link>
                     </Navbar.Brand>
@@ -70,10 +76,18 @@ export class Navbarctm extends Component {
                                 <Nav.Link href="#link">Link</Nav.Link> */}
                                 <ul className="navbar-nav ml-auto">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/Contact" >Contact</Link>
+                                <Link  to="/Contact"   className={
+                          this.isPathActive("/Contact")
+                            ? "nav-link active"
+                            : "nav-link"
+                        } >Contact</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/HelpCenter" >Help Center</Link>
+                                <Link  to="/HelpCenter"  className={
+                          this.isPathActive("/HelpCenter")
+                            ? "nav-link active"
+                            : "nav-link"
+                        } >Help Center</Link>
                             </li>
                             <li className="nav-item">
                                 <button className="btn btn-theme " onClick={()=>{this.handelModal()}}  type="submit">Login</button>
@@ -102,7 +116,11 @@ export class Navbarctm extends Component {
             </div>
         )
     }
+    isPathActive(path) {
+        return this.props.location.pathname.startsWith(path)
+         
+      }
 }
 
-export default Navbarctm
+export default withRouter(Navbarctm)
 
